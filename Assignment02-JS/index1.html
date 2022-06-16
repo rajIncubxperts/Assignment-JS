@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="maaincontainer">
+      <div class="container-left" id="container5">
+        <h1 class="label">Sample Form</h1>
+        <form name="dataform">
+          <div class="form">
+            <div>
+              <label id="fname">First Name:</label><br>
+              <input
+                type="text"
+                id="txtInput"
+                name="fname"
+                placeholder="Enter your first Name"
+              /> <br>
+              <span id="fname-err" class="text-danger"></span><br>
+            </div>
+            
+            <div>
+              <label id="lname">Last Name:</label><br>
+              <input
+                type="text"
+                id="txtInput1"
+                name="lname"
+                placeholder="Enter your last Name"
+                /><br>
+              <span id="lname-err" class="text-danger"></span><br>
+            </div>
+
+            <div>
+              <label id="email">Email ID:</label><br> 
+              <input
+                type="text"
+                id="txtInput2"
+                name="email"
+                placeholder="Enter your Email" 
+              /> <br>
+              <span id="email-err" class="text-danger"></span> <br>
+            </div>
+            <div>
+								<label id="age">Age:</label><br>
+								<input name="age" id="txtInput3" type="text" placeholder="Enter age"><br>
+								<span id="age-err" class="text-danger"></span><br>
+							</div>
+
+           <b>Select Country:</b> 
+            <select
+              class="inputfield"
+              name="countrya"
+              id="input"
+              onchange="load()"
+            >
+              <option value="" selected="selected">--Choose Country--</option>
+          </select><span id="country-err" class="text-danger"></span>
+            </select>
+            <br />
+          
+          <b>Select State:</b>
+            <select
+              class="inputfield"
+              name="state"
+              id="input1"
+              onchange="load()"
+            >
+              <option value="" selected="selected">
+                --Please select Country first--
+              </option>
+              </select><span id="state-err" class="text-danger"></span>
+            </select>
+            <br />
+           <b>Select City:</b> 
+            <select class="inputfield" name="district" id="input2">
+              <option value="" selected="selected">
+                --Please select State first--
+              </option>
+        </select><span id="city-err" class="text-danger"></span>
+            </select>
+
+            <div class="btnSubmit">
+              <button id="show" type="button" onclick="load()">Submit</button>
+            </div>
+        </div>
+      </div>
+
+      <div id="container5">
+        <h1 class="label">Output Table</h1>
+        <table id="table" border="2"> 
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Country</th>
+            <th>State</th>
+            <th>District</th>
+            <th>Age</th>
+          </tr>
+          <tr></tr>
+        </table>
+      </div>
+    </form>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
